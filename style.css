@@ -1,0 +1,121 @@
+:root {
+    --White: hsl(0, 100%, 100%);
+    --Purple-100: hsl(275, 100%, 97%);
+    --Purple-600: hsl(292, 16%, 49%);
+    --Purple-950: hsl(292, 42%, 14%);
+    --The-Purple: hsl(281, 83%, 54%);
+}
+
+* {
+    scrollbar-width: none;
+    font-family: "Work Sans", sans-serif;
+}
+
+body {
+    background-color: var(--Purple-100);
+    background-image: url(./assets/images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--Purple-950);
+}
+
+.card-title {
+    display: flex;
+    padding-bottom: 2rem;
+    align-items: center;
+}
+
+h2 {
+    font-size: 60px;
+    padding-left: 2rem;
+    margin: 0;
+}
+
+.acordeon .question .pm {
+    height: 30px;
+    width: 30px;
+    background-image: url(./assets/images/icon-plus.svg);
+    background-repeat: no-repeat;
+}
+
+.container {
+    background-color: var(--White);
+    display: flex;
+    flex-direction: column;
+    max-width: 550px;
+    padding: 3rem;
+    border-radius: 20px;
+    max-height: 100%;
+}
+
+.acordeon .question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.acordeon .question .h3 {
+    margin: 0;
+}
+
+.acordeon .question:hover {
+    cursor: pointer;
+    color: var(--The-Purple);
+}
+
+.acordeon .content {
+    height: 0;
+    overflow: hidden;
+    transition: all .3s ease;
+    margin: 0;
+    color: var(--Purple-600);
+}
+
+.acordeon .block.active .content {
+    height: auto;
+    padding: .5rem 0;
+    margin-bottom: 1rem;
+}
+
+.acordeon .block.active .pm {
+    background-image: url(./assets/images/icon-minus.svg);
+}
+
+hr {
+    margin: 0;
+    color: var(--Purple-100)
+}
+
+
+@media (width <= 375px) {
+    body {
+        background-image: url(./assets/images/background-pattern-mobile.svg);
+        font-size: 15px;
+    }
+
+    .container {
+        max-width: 300px;
+        padding: 2rem;
+    }
+
+    h2 {
+        font-size: 50px;
+        padding-left: 1rem;
+    }
+
+    .acordeon .question{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .h3 {
+        max-width: 240px;
+    }
+}
